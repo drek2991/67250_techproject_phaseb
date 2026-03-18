@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>  
+<head> 
+<link rel="stylesheet" href="../static/style.css">
+<meta name="author" content="Derek Li">
+<meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+<meta name="description" content="MonoMuse website redesign project">
+<title>MonoMuse</title>
+</head>
+
+<body>
+    <header>
+        <h1>Checkout</h1>
+        <nav> 
+            <a href="../index.html">Home</a>
+            <a href="explore.html">Explore</a>
+            <a href="exhibitions.html">Exhibitions</a>
+            <a href="tickets.html">Buy Tickets</a>
+            <a href="checkout.html">Checkout</a>
+        </nav>
+    </header>
+
+    <div class="main">
+        <form>
+            <label for="name">Name (required):</label><br>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">Email (required):</label><br>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="quantity">Ticket Quantity (required):</label><br>
+            <input type="number" id="quantity" name="quantity" min="1" max="10" required><br>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>   
+        <p>&copy; 2026 MonoMuse. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+
+
