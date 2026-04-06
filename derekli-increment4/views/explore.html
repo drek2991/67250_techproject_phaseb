@@ -3,13 +3,14 @@
 <head> 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../static/style.css">
+<script src="../static/script.js" defer></script>
 <meta name="author" content="Derek Li">
 <meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
 <meta name="description" content="MonoMuse website redesign project">
 <title>MonoMuse</title>
 </head>
 
-<body>
+<body onload="addYear()">
     <header>
         <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
         <nav> 
@@ -43,7 +44,7 @@
     </div>
 
     <footer>   
-        <p>&copy; 2026 MonoMuse. All rights reserved.</p>
+        <p id="copyYear"></p>
     </footer>
 </body>
 </html>
