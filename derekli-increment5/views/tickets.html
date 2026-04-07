@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>  
+<head> 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/style.css">
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+<script src="../static/script.js" defer></script>
+<meta name="author" content="Derek Li">
+<meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+<meta name="description" content="MonoMuse website redesign project">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonoMuse</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar"> 
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="tickets.html">Buy Tickets</a>
+        <button id="hamburger" onclick="toggleNav()">☰</button>
+    </nav>
+
+    <main class="main">
+        <h2>Buy Tickets</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>March 8</td>
+                <td>$20</td>
+                <td><button onclick="showForm('March 8')">Buy Now</button></td>
+            </tr>
+
+            <tr>
+                <td>March 9</td>
+                <td>$20</td>
+                <td><button onclick="showForm('March 9')">Buy Now</button></td>
+            </tr>
+
+            <tr>
+                <td>March 15</td>
+                <td>$20</td>
+                <td><button onclick="showForm('March 15')">Buy Now</button></td>
+            </tr>
+
+            <tr>
+                <td>March 16</td>
+                <td>$20</td>
+                <td><button onclick="showForm('March 16')">Buy Now</button></td>
+            </tr>
+        </table>
+
+        <form id="ticketForm">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email">
+
+            <label for="quantity">Number of tickets</label>
+            <input type="number" id="quantity">
+
+            <label for="date">Selected date</label>
+            <input type="text" id="date">
+
+            <button type="button" onclick="submitTicket()">Submit</button>
+        </form>
+    </main>
+
+    <footer class="footer">   
+        <p id="copyYear"></p>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
