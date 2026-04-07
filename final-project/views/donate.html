@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/style.css">
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+<script src="../static/script.js" defer></script>
+<meta name="author" content="Derek Li">
+<meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+<meta name="description" content="MonoMuse website redesign project">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonoMuse - Donate</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="tickets.html">Buy Tickets</a>
+        <a href="donate.html">Donate</a>
+        <button id="hamburger" onclick="toggleNav()">☰</button>
+    </nav>
+
+    <main class="main">
+        <h1>Support MonoMuse</h1>
+
+        <p>
+            Your support helps MonoMuse continue to create innovative exhibitions,
+            educational programs, and accessible experiences for all visitors.
+        </p>
+
+        <h3>Why Donate?</h3>
+        <ul>
+            <li>Support new exhibitions and artists</li>
+            <li>Fund educational programs and workshops</li>
+            <li>Improve accessibility and visitor experiences</li>
+        </ul>
+
+        <h3>Suggested Donation Amounts</h3>
+        <table>
+            <tr>
+                <th>Amount</th>
+                <th>Impact</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td>$10</td>
+                <td>Supports museum outreach</td>
+                <td><button onclick="location.href='donate-checkout.html?amount=10'">Donate</button></td>
+            </tr>
+            <tr>
+                <td>$25</td>
+                <td>Helps fund exhibitions</td>
+                <td><button onclick="location.href='donate-checkout.html?amount=25'">Donate</button></td>
+            </tr>
+            <tr>
+                <td>$50</td>
+                <td>Supports education programs</td>
+                <td><button onclick="location.href='donate-checkout.html?amount=50'">Donate</button></td>
+            </tr>
+            <tr>
+                <td>$100</td>
+                <td>Enhances accessibility initiatives</td>
+                <td><button onclick="location.href='donate-checkout.html?amount=100'">Donate</button></td>
+            </tr>
+        </table>
+
+        <p>Or choose your own amount on the next page.</p>
+
+        <a class="cta" href="donate-checkout.html">Donate Now</a>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+</div>
+</body>
+</html>

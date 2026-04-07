@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>  
+<head> 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./static/style.css">
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+<script src="./static/script.js" defer></script>
+<meta name="author" content="Derek Li">
+<meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+<meta name="description" content="MonoMuse website redesign project">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonoMuse</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+    <header class="header">
+        <img id="logo" src="./static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar">
+        <a href="index.html">Home</a>
+        <a href="views/explore.html">Explore</a>
+        <a href="views/exhibitions.html">Exhibitions</a>
+        <a href="views/tickets.html">Buy Tickets</a>
+        <a href="views/donate.html">Donate</a>
+        <button id="hamburger" onclick="toggleNav()">☰</button>
+    </nav>
+
+    <main class="main">
+        <h1 id="greeting"></h1>
+        <h2>Welcome to MonoMuse</h2>
+
+        <p id="shortIntro">
+            MonoMuse is a contemporary museum dedicated to art, technology, and creativity.
+        </p>
+
+        <p id="longIntro">
+            Through immersive exhibitions, interactive installations, and rotating collections, MonoMuse invites visitors to discover how digital innovation is transforming the way we create, experience, and understand art.
+        </p>
+
+        <button id="readMore">Read More</button>
+        <button id="readLess">Read Less</button>
+
+        <a class="cta" href="views/tickets.html">Buy Tickets</a>
+    </main>
+
+    <figure class="main_img"></figure>
+
+    <footer class="footer"> 
+        <p id="copyYear"></p>
+    </footer>
+</div>
+</body>
+</html>
+
+
+
+
+

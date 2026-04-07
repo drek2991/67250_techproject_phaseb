@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>  
+<head> 
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/style.css">
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+<script src="../static/script.js" defer></script>
+<meta name="author" content="Derek Li">
+<meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+<meta name="description" content="MonoMuse website redesign project">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonoMuse - Tickets</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+    <nav class="nav_bar"> 
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="tickets.html">Buy Tickets</a>
+        <a href="donate.html">Donate</a>
+        <button id="hamburger" onclick="toggleNav()">☰</button>
+    </nav>
+
+    <main class="main">
+    <h1>Buy Tickets</h1>
+    <p>All tickets are $18 per person. Select a date below to begin your purchase.</p>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Day</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>March 8, 2026</td>
+            <td>Sunday</td>
+            <td>$18</td>
+            <td><button onclick="location.href='checkout.html?date=March+8+2026'">Buy Now</button></td>
+        </tr>
+        <tr>
+            <td>March 9, 2026</td>
+            <td>Monday</td>
+            <td>$18</td>
+            <td><button onclick="location.href='checkout.html?date=March+9+2026'">Buy Now</button></td>
+        </tr>
+        <tr>
+            <td>March 15, 2026</td>
+            <td>Sunday</td>
+            <td>$18</td>
+            <td><button onclick="location.href='checkout.html?date=March+15+2026'">Buy Now</button></td>
+        </tr>
+        <tr>
+            <td>March 16, 2026</td>
+            <td>Monday</td>
+            <td>$18</td>
+            <td><button onclick="location.href='checkout.html?date=March+16+2026'">Buy Now</button></td>
+        </tr>
+    </table>
+</main>
+
+    <footer class="footer">   
+        <p id="copyYear"></p>
+    </footer>
+</div>
+</body>
+</html>
+
+
+

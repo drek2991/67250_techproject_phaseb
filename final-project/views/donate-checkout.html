@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../static/style.css">
+<script src="https://code.jquery.com/jquery-4.0.0.min.js" integrity="sha256-OaVG6prZf4v69dPg6PhVattBXkcOWQB62pdZ3ORyrao=" crossorigin="anonymous"></script>
+<script src="../static/script.js" defer></script>
+<meta name="author" content="Derek Li">
+<meta name="keywords" content="Museum, Carnegie Mellon University, Information Systems">
+<meta name="description" content="MonoMuse website redesign project">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MonoMuse - Donation Checkout</title>
+</head>
+
+<body onload="addYear()">
+<div class="container">
+    <header class="header">
+        <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
+    </header>
+
+    <nav class="nav_bar">
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="tickets.html">Buy Tickets</a>
+        <a href="donate.html">Donate</a>
+        <button id="hamburger" onclick="toggleNav()">☰</button>
+    </nav>
+
+    <main class="main">
+        <h1>Donation</h1>
+        <p>Support MonoMuse by making a one-time gift.</p>
+
+        <form id="donateForm">
+            <label for="donationAmount">Donation Amount *</label>
+            <select id="donationAmount" required>
+                <option value="">-- Select --</option>
+                <option value="10">$10</option>
+                <option value="25">$25</option>
+                <option value="50">$50</option>
+                <option value="100">$100</option>
+            </select>
+            <span class="error" id="donationAmountError"></span>
+
+            <p id="donationDisplay">Total: $0</p>
+
+            <label for="email">Email *</label>
+            <input type="email" id="email" required>
+            <span class="error" id="emailError"></span>
+
+            <label for="zip">Zip Code (optional)</label>
+            <input type="text" id="zip" maxlength="5">
+            <span class="error" id="zipError"></span>
+
+            <label for="mailingList">Join our mailing list?</label>
+            <input type="checkbox" id="mailingList">
+
+            <button type="button" id="donateNow">Donate Now</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <p id="copyYear"></p>
+    </footer>
+</div>
+</body>
+</html>
