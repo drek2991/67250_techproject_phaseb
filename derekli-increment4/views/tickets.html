@@ -11,45 +11,72 @@
 </head>
 
 <body onload="addYear()">
-    <header>
+<div class="container">
+    <header class="header">
         <img id="logo" src="../static/monomuselogo.png" alt="MonoMuse Museum Logo">
-        <nav> 
-            <a id="navselected" href="../index.html">Home</a>
-            <a href="explore.html">Explore</a>
-            <a href="exhibitions.html">Exhibitions</a>
-            <a href="tickets.html">Buy Tickets</a>
-            <a href="checkout.html">Checkout</a>
-        </nav>
     </header>
+    <nav class="nav_bar"> 
+        <a href="../index.html">Home</a>
+        <a href="explore.html">Explore</a>
+        <a href="exhibitions.html">Exhibitions</a>
+        <a href="tickets.html">Buy Tickets</a>
+        <a href="checkout.html">Checkout</a>
+    </nav>
 
-    <div class="main">
+    <main class="main">
+        <h2>Buy Tickets</h2>
         <table>
             <tr>
-                <th>Ticket Type</th>
-                <th>Description</th>
-                <th>Price ($)</th>
+                <th>Date</th>
+                <th>Price</th>
+                <th>Action</th>
             </tr>
             <tr>
-                <td>Guest</td>
-                <td>Access to all exhibitions and installations.</td>
-                <td>$18</td>
+                <td>March 8</td>
+                <td>$20</td>
+                <td><button onclick="showForm('March 8')">Buy Now</button></td>
             </tr>
+
             <tr>
-                <td>Student</td>
-                <td>Student ID required.</td>
-                <td>$18</td>
+                <td>March 9</td>
+                <td>$20</td>
+                <td><button onclick="showForm('March 9')">Buy Now</button></td>
             </tr>
+
             <tr>
-                <td>Member</td>
-                <td>Member ID required.</td>
-                <td>$18</td>
+                <td>March 15</td>
+                <td>$20</td>
+                <td><button onclick="showForm('March 15')">Buy Now</button></td>
+            </tr>
+
+            <tr>
+                <td>March 16</td>
+                <td>$20</td>
+                <td><button onclick="showForm('March 16')">Buy Now</button></td>
             </tr>
         </table>
-    </div>
 
-    <footer>   
+        <form id="ticketForm">
+            <label for="name">Name</label>
+            <input type="text" id="name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email">
+
+            <label for="quantity">Number of tickets</label>
+            <input type="number" id="quantity">
+
+            <label for="date">Selected date</label>
+            <input type="text" id="date">
+
+            <button type="button" onclick="submitTicket()">Submit</button>
+        </form>
+    </main>
+
+    <footer class="footer">   
         <p id="copyYear"></p>
     </footer>
+</div>
 </body>
 </html>
 

@@ -82,3 +82,48 @@ function addYear() {
     document.getElementById("copyYear").innerHTML = "&copy; " + currentYear + " MonoMuse. All rights reserved.";
 }
 
+
+/* Sets the 'active' class on the navigation link that matches the current page URL.*/
+
+function ActiveNav() {
+    // Get all navigation links
+    const navLinks = document.querySelectorAll('nav a');
+
+    // Iterate over each link
+    navLinks.forEach(link => {
+    // Check if the link's href matches the current window location
+        if (window.location.href === link.href) {
+            // Add the 'active' class to highlight the current page
+            link.classList.add("active");
+        }
+    });
+}
+
+// Execute the function to set the active navigation link on page load
+ActiveNav();
+
+// When the "Read Less" button is clicked
+ $("#readLess").click(function(){ 
+    $("#longIntro").hide(); // Hide the long introduction text
+    $("#readLess").hide();  // Hide the "Read Less" button itself
+    $("#readMore").show();  // Show the "Read More" button  
+
+  });
+  
+// When the "Read More" button is clicked
+  $("#readMore").click(function(){
+    $("#longIntro").show();  // Show the long introduction text
+    $("#readLess").show();   // Show the "Read Less" button
+    $("#readMore").hide();   // Hide the "Read More" button  
+  });
+
+
+function showForm(date) {
+  document.getElementById("ticketForm").style.display = "block";
+  document.getElementById("date").value = date;
+}
+
+function submitTicket() {
+    alert("Redirecting to payment system.");
+}
+

@@ -3,10 +3,10 @@
   margin: 5px;
   font-family: Roboto, Helvetica, Arial, sans-serif;
   font-optical-sizing: auto;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1.5;
-  background: #E2D9CA;
   color: #574407;
+  background-color: #E2D9CA;
 }
 
 
@@ -29,8 +29,8 @@ h3 { font-size: 18px; font-weight: 400; font-family: Roboto, sans-serif; }
 }
 
 header {
-    padding: 15px 30px;
-    margin: 0;
+  padding: 15px 30px;
+  margin: 0;
 }
 
 nav {
@@ -42,7 +42,7 @@ nav {
 nav a {
   text-decoration: none;
   color: #574407;
-  font-weight: 400;
+  font-weight: 300;
   padding: 8px 10px;
   border: 1px solid transparent;
   border-radius: 12px;
@@ -53,14 +53,14 @@ nav a:hover {
   color: #936A0B;
 }
 
-#navselected {
-  color: #574407;
+nav a.active {
+  color: #936A0B;
+  font-weight: 500;
 }
 
 .main {
   padding: 30px;
   max-width: 900px;
-  margin: auto;
 }
 
 .cta {
@@ -91,11 +91,6 @@ footer {
   margin-top: 30px;
 }
 
-footer {
-  padding: 18px 16px;
-  text-align: center;
-}
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -120,9 +115,21 @@ tr:nth-child(even) {
   background-color: #574407;
 }
 
-form * {
-  margin: auto;
-  text-align: center;
+form {
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+}
+
+form input {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px;
 }
 
 input, select, textarea {
@@ -148,3 +155,40 @@ input, select, textarea {
   max-width: 100px;
 }
 
+
+.container {
+  display: grid; /* Turns this div into a CSS Grid layout */
+  grid-template-areas:   /* Defines the layout structure */
+    'header header'
+    'nav_bar nav_bar'
+    'main main-img'
+    'footer footer';
+}
+
+/* Places each element into the correct area of the grid */
+.header {
+   grid-area: header; 
+}
+.nav_bar {
+   grid-area: nav_bar;
+   display: flex; /* Uses Flexbox for internal layout */
+   justify-content: right;   /* Right aligns the content */
+}
+.main {
+  grid-area: main; 
+}
+.main_img {
+   grid-area: main-img; 
+}
+.footer {
+   grid-area: footer;
+}
+
+#longIntro,
+#readLess {
+  display: none;
+}
+
+#ticketForm {
+  display: none;
+}
